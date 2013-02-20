@@ -1,0 +1,30 @@
+application: gae-common 
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+default_expiration: "30d"
+
+builtins:
+  - admin_redirect: on
+  - appstats: on
+
+handlers:
+- url: /statics
+  static_dir: statics
+  expiration: "1d"
+
+- url: /favicon.ico
+  static_files: statics/img/favicon.ico
+  upload: statics/img/favicion.ico
+
+- url: /robots.txt
+  static_files: statics/robots.txt
+  upload: statics/robots.txt
+
+- url: /crossdomain.xml
+  static_files: statics/crossdomain.xml
+  upload: statics/crossdomain.xml
+
+- url: /.*
+  script: main.app

@@ -1,0 +1,5 @@
+{% extends 'base.txt' %}
+{% block title %}Hi there{% endblock %}
+{% block content %}
+Hello world email
+{% endblock %}

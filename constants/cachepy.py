@@ -1,0 +1,6 @@
+# coding: utf-8
+
+from config import PAGE_CACHING_MASTER_VERSION
+
+URL_KEY = 'URL:' + str(PAGE_CACHING_MASTER_VERSION) + ':5:%s'
+ETAG_KEY = 'URL_ETAG:' + str(PAGE_CACHING_MASTER_VERSION) + ':5:%s'
